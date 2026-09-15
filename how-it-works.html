@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How it works | SdreClip</title><meta name="description" content="Step-by-step description of how SdreClip prepares and publishes stream highlights to TikTok."><style>:root{color-scheme:light dark;--bg:#f7f7fb;--card:#fff;--text:#16161d;--muted:#5b5b6b;--accent:#fe2c55;--accent2:#25f4ee;--line:#e6e6ef}
+@media(prefers-color-scheme:dark){:root{--bg:#0e0e13;--card:#17171f;--text:#f2f2f7;--muted:#a9a9b8;--line:#2a2a36}}
+*{box-sizing:border-box}body{margin:0;font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--text)}
+header{background:var(--card);border-bottom:1px solid var(--line)}nav{max-width:960px;margin:0 auto;padding:14px 20px;display:flex;flex-wrap:wrap;gap:8px 20px;align-items:center}
+.logo{font-weight:800;font-size:1.2rem;margin-right:auto;text-decoration:none;color:var(--text)}.logo span{color:var(--accent)}
+nav a{color:var(--muted);text-decoration:none}nav a[aria-current]{color:var(--text);font-weight:600}
+main{max-width:960px;margin:0 auto;padding:32px 20px 48px}h1{font-size:2rem;line-height:1.2;margin:.2em 0 .4em}h2{margin-top:1.8em}
+.lead{font-size:1.15rem;color:var(--muted);max-width:720px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:24px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}.card h3{margin:.1em 0 .4em}
+ol.steps{padding-left:1.2em}ol.steps li{margin:.6em 0}.note{border-left:4px solid var(--accent);background:var(--card);padding:12px 16px;border-radius:8px}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:10px 0}summary{font-weight:600;cursor:pointer}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}footer div{max-width:960px;margin:0 auto;padding:20px;display:flex;flex-wrap:wrap;gap:8px 18px}footer a{color:var(--muted)}</style></head>
+<body><header><nav><a class="logo" href="index.html">Sdre<span>Clip</span></a><a href="index.html">Home</a><a href="how-it-works.html" aria-current="page">How it works</a><a href="features.html">Features</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></nav></header>
+<main>
+<h1>How SdreClip works</h1>
+<p class="lead">From a finished live stream to a published TikTok video, every step is automated and runs on SdreClip's own server.</p>
+<ol class="steps">
+<li><b>Stream archive.</b> After a live stream on Kick ends, its recording (VOD) belongs to the Sdre channel and is added to the processing queue.</li>
+<li><b>Highlight selection.</b> Audio peaks and the transcript are analysed to pick the most engaging 20–60 second moments. Moments with offensive language are skipped.</li>
+<li><b>Vertical edit.</b> Each moment is converted to 1080×1920: facecam on top, gameplay below, with word-by-word captions and a short title.</li>
+<li><b>Quality check.</b> Every video is verified for duration, resolution and audio before it can be published.</li>
+<li><b>Owner authorization.</b> The channel owner connects their TikTok account once through TikTok Login Kit and approves the <code>user.info.basic</code> and <code>video.publish</code> permissions. Access can be revoked at any time from TikTok settings.</li>
+<li><b>Publishing.</b> On a fixed schedule, SdreClip uploads the next clip using the Content Posting API <b>Direct Post</b> flow with the caption and privacy level chosen by the owner.</li>
+<li><b>Tracking.</b> The publish status returned by TikTok is recorded so the same clip is never posted twice.</li>
+</ol>
+<div class="note">SdreClip never posts content that does not belong to the connected account owner, and it does not use TikTok data for advertising or share it with third parties. Details: <a href="../sdreclip_privacy.html">Privacy Policy</a>.</div></main>
+<footer><div><span>© 2026 SdreClip · Sdre</span><a href="../sdreclip_terms.html">Terms of Service</a><a href="../sdreclip_privacy.html">Privacy Policy</a><a href="contact.html">Contact</a></div></footer>
+</body></html>
